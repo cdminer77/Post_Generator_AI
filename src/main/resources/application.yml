@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: fb-post-generator-ai
+
+gemini:
+  api-key: ${GEMINI_API_KEY:}
+  model: ${GEMINI_MODEL:gemini-3.8-flash}
+  base-url: "https://generativelanguage.googleapis.com/v1beta"
+
+app:
+  scraper:
+    connect-timeout-ms: 8000
+    read-timeout-ms: 10000
+    user-agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+    max-extracted-chars: 10000
